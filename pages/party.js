@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Cinco from '../components/cinco/cinco';
-import Leftbar from '../components/LeftBar/Leftbar';
+import Leftbar from '../components/leftBar/Leftbar';
 
-import Navbar from '../components/Navbar/navbar';
+import Navbar from '../components/navbar/navbar';
 
 const Party = () => {
     return (

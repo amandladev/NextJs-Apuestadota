@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Leftbar from '../components/LeftBar/Leftbar';
-import ModesContainer from '../components/modesContainer/ModesContainer';
-import Navbar from '../components/Navbar/navbar';
+import Leftbar from '../components/leftBar/Leftbar';
+import Navbar from '../components/navbar/navbar';
 import Solo from '../components/solo/solo';
 
 const Play = () => {
