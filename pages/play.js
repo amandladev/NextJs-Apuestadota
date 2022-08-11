@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Leftbar from '../components/leftBar/Leftbar';
-import Navbar from '../components/navbar/navbar';
+import Navbar from '../components/navbar/Navbar';
 import Solo from '../components/solo/solo';
 
 const Play = () => {

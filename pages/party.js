@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Cinco from '../components/cinco/cinco';
 import Leftbar from '../components/leftBar/Leftbar';
 
-import Navbar from '../components/navbar/navbar';
+import Navbar from '../components/navbar/Navbar';
 
 const Party = () => {
     return (

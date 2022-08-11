@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/navbar/navbar';
+import Navbar from '../components/navbar/Navbar';
 import Leftbar from '../components/leftBar/Leftbar';    
 import ProfileSettings from '../components/profileSettings/ProfileSettings';
 
