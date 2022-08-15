@@ -239,11 +239,11 @@ const ProfileSettings = () => {
         .profile-green-q {
             background-color: transparent;
             padding: 0.5rem 1rem;
-            border: 2px solid #21e79f;
+            border: 2px solid #b6ff40;
         }
 
         .profile-green-q h4 {
-            color: #21e79f;
+            color: #b6ff40;
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
         }

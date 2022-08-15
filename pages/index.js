@@ -17,12 +17,12 @@ const Home = () => {
                 <div>
                 <Link href={'/login'}>
                      <a>
-                        <button className="btn outline">Login</button>
+                        <button className="btn outline">Ingresar</button>
                     </a>
                 </Link>
                     
                     
-                    <button className="btn btn-md">Sign up</button>
+                    <button className="btn btn-md">Registrarse</button>
                 </div>
             </div>
 
@@ -97,42 +97,6 @@ const Home = () => {
                   </div>
               </div>
           </section>
-      
-{/* 
-              <section className="third-section">
-                <div   className="third-section-large-header">
-                <img src="aegis.jpg" alt="sas" className="top-image" />
-
-                <div className="grid-content">
-                      
-                      <div className="second-section-img" >
-                          <img src="heros/invoker.png" alt="lion" id="id-single-img" />
-                      </div>
-                      <div>
-                          <div className="info-cont">
-                              <h3 className="title-2 cursive"><span className="blue">1.</span> HAZ UN DEPOSITO DESDE 10 DOLARES</h3>
-                              
-                          </div>
-                          <div className="info-cont">
-                              <h3 className="title-2 cursive"><span className="purple">2.</span> JUEGA COMO SI ESTUVIERAS EN EL INTERNATIONAL</h3>
-                 
-                          </div>
-                          <div className="info-cont">
-                              <h3 className="title-2 cursive"><span className="purple">3.</span> RETIRA TUS GANANCIAS Y DISFRUTA DE TU EXITO</h3>
-                             
-                          </div>
-
-                      </div>
-                      
-                  </div>
-                  </div>
-          </section>     */}
-
-
-
-
-
-
 
           <section className="third-section">
               <div   className="third-section-large-header">

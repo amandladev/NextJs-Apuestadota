@@ -409,7 +409,7 @@ video {
 
 .third-section-large-header {    
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
     position: relative;
     
 } 
@@ -807,11 +807,16 @@ MEDIA QUERY MAXW WIDTH 415PX  */
 
 @media (max-width: 415px) {
 
+  .first-section {
+    height: 90vh;
+  }
+
   #myVideo {
     display: none;
   }
   #myVideo2 {
     display: block;
+    transform: translateY(-60px);
   }
                 
   .logo {
@@ -827,6 +832,7 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   }
   .intro {
     top: 7%;
+    z-index: 99;
   }
 
   .marquee-center {
@@ -842,7 +848,8 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   }
   .second-section {
     height: 500px;
-    padding-top: 100px;
+    padding-top: 120px;
+    margin-top:100px;
   }
   .mt-ss {
     margin-top: 20px;
@@ -871,7 +878,10 @@ MEDIA QUERY MAXW WIDTH 415PX  */
     margin-top: 0; 
     margin-left: 20px;
     margin-right: 20px;
-}
+  }
+  .third-section {
+    margin-top: 20%;
+  } 
 }
 
 /* IPHONE 8  */
@@ -890,5 +900,8 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   }
   .font-m {
     font-size: 15px;
+}
+.third-section {
+  margin-bottom: 120px;
 }
 }

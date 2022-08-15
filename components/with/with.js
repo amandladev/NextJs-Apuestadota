@@ -164,7 +164,30 @@ const With = () => {
     font-size: 16px;
     font-weight: 600;
 }
+@media (max-width: 768px) {
 
+.intro-title {
+    font-size: 3rem;
+}
+
+.deposit-container {
+    flex-direction: column; 
+    margin-left: 30%;
+
+}
+.deposito-min-max {
+    width: 90%;
+}
+
+
+.deposit-amount {
+    flex-wrap: wrap;
+}
+
+.help-c {
+    margin-top: -75px;
+}
+}
 
 
 

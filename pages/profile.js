@@ -27,6 +27,13 @@ const Profile = () => {
                 overflow-y: hidden;
             }
             
+            @media (max-width: 768px) { 
+            
+            .mode-play {
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+    }
         `}
         </style>
         </div>

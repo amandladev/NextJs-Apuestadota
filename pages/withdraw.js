@@ -39,6 +39,15 @@ const Withdraw = () => {
                 margin-top: -20px;
                 filter: invert(89%) sepia(77%) saturate(549%) hue-rotate(26deg) brightness(105%) contrast(103%);
             }
+
+
+            @media (max-width: 768px) { 
+            
+            .mode-play {
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+    }
         `}
         </style>
         </div>
