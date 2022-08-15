@@ -44,11 +44,7 @@ const Party = () => {
                 height: 100vh;
                 overflow-x: hidden;
             }
-            .main--1 {
-                display: grid;
-                grid-template-columns: 1fr 7fr;
-               
-            }
+            
         `}
         </style>
         </div>

@@ -10,9 +10,11 @@ const Withdraw = () => {
             <Navbar />
 
             <div className='main--1'>
-                <Leftbar/>
+                <Leftbar classWitdraw={'left-container-body-anchor left-body-anchor-active'}  c2={'left-container-body-anchor'} c3={'left-container-body-anchor'}  c4={'left-container-body-anchor'}/>
                 <div className='interface'>
                     <With/>
+
+                    <img className='help-c' src='/icons/help-with-circ.svg'></img>
                 </div>
                 
             </div>
@@ -26,10 +28,16 @@ const Withdraw = () => {
                 height: 100vh;
                 overflow-y: hidden;
             }
-            .main--1 {
-                display: grid;
-                grid-template-columns: 1fr 7fr;
-               
+            
+
+            .help-c {
+                height: 50px;
+                position: absolute;
+                right: 0;
+                
+                margin-right: 40px;
+                margin-top: -20px;
+                filter: invert(89%) sepia(77%) saturate(549%) hue-rotate(26deg) brightness(105%) contrast(103%);
             }
         `}
         </style>

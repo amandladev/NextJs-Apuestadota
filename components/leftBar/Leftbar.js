@@ -1,46 +1,55 @@
 import React from 'react';
 import Link from 'next/link';
+import { useState } from 'react';
 
-const Leftbar = () => {
+const Leftbar = (classWitdraw, c2, c3, c4) => {
+
+
+   
+console.log(classWitdraw)
     return (
         <div className="left-container">
         <div className="left-container-header">
             <div className="pad--s">
                 <h3 className="left-container-h3">Tu Saldo:</h3>
-                <h3 className="left-container-h3 left-flex-container-h"> <img src='/icons/currency-usd.png' className='dollar--svg'></img><span className="fontw-l"> 120.00</span></h3>
+                <h3 className="left-container-h3 left-flex-container-h"> <img src='/icons/currency-usd-g.png' className='dollar--svg'></img><span className="fontw-l"> 120.00</span></h3>
             </div>
-            <img src='/icons/right-arrow-svg.svg' className='right-arrow--svg'></img>
+
+            <Link href={'/extra'}>
+                <img src='/icons/right-arrow-svg.svg' className='right-arrow--svg'></img>
+            </Link>
+            
         </div>
         <div className="left-container-body">
             <div className="left-container-body-item">
                 <Link href="/play">
-                    <a className='left-container-body-anchor'>
-                        <img className="left-container-img" src="/icons/controller-classic-l.png" alt="home" /> 
-                        <h3 className="left-container-h3">JUEGA</h3>
+                    <a className={classWitdraw.c2}>
+                        <img className="left-container-img left-img-active" src="/icons/controller-classic-l.png" alt="home" /> 
+                        <h3 className="left-container-h3 left-h3-active">JUEGA</h3>
                     </a>
                 </Link>
             </div>
             <div className="left-container-body-item">
                 <Link href="/profile">
-                    <a className='left-container-body-anchor'>
-                        <img  className="left-container-img" src="/icons/account-l.png" alt="home" /> 
-                        <h3 className="left-container-h3">PERFIL</h3>
+                    <a className={classWitdraw.c4} >
+                        <img  className="left-container-img left-img-active" src="/icons/account-l.png" alt="home" /> 
+                        <h3 className="left-container-h3  left-h3-active">PERFIL</h3>
                     </a>
                 </Link>
             </div>
             <div className="left-container-body-item">
                 <Link href="/deposit"> 
-                    <a className='left-container-body-anchor'>
-                        <img className="left-container-img" src="/icons/cash-fast-l.png" alt="home" /> 
-                        <h3 className="left-container-h3">DEPOSITO</h3>
+                    <a className={classWitdraw.c3}>
+                        <img className="left-container-img left-img-active" src="/icons/cash-fast-l.png" alt="home" /> 
+                        <h3 className="left-container-h3 left-h3-active">DEPOSITO</h3>
                     </a>
                 </Link>
             </div>
             <div className="left-container-body-item">
                 <Link href="/withdraw">
-                    <a className='left-container-body-anchor'>
-                        <img className="left-container-img" src="/icons/currency-usd-l.png" alt="home" /> 
-                        <h3 className="left-container-h3">RETIRO</h3>
+                    <a className={classWitdraw.classWitdraw} >
+                        <img className="left-container-img left-img-active" src="/icons/currency-usd-l.png" alt="home" /> 
+                        <h3 className="left-container-h3 left-h3-active">RETIRO</h3>
                     </a>
                 </Link> 
             </div>
@@ -71,7 +80,7 @@ const Leftbar = () => {
         
         .dollar--svg {
             height: 25px;
-            filter: invert(100%) sepia(19%) saturate(6900%) hue-rotate(23deg) brightness(98%) contrast(108%);        }
+                 }
        
 
         .right-arrow--svg {
@@ -79,6 +88,7 @@ const Leftbar = () => {
             filter: invert(100%) sepia(19%) saturate(6900%) hue-rotate(23deg) brightness(98%) contrast(108%);
             padding-right: 10px;
             align-self:center;
+            cursor: pointer;
         }
         .left-flex-container-h {
             display: flex;
@@ -147,6 +157,23 @@ const Leftbar = () => {
         .left-container-body-item:hover .left-container-h3 {
             color: #fff;
         }
+        
+
+        .left-body-anchor-active {
+            background-color: #3c5376;
+        }
+
+
+        .left-body-anchor-active .left-h3-active {
+            color: #fff!important;
+        }
+
+
+        .left-body-anchor-active .left-img-active {
+            filter: brightness(0%) invert(100%);
+        -webkit-filter: brightness(0%) invert(100%);
+        -moz-filter: brightness(0%) invert(100%);
+        }
 
         .left-container-body-item:hover .left-container-img {
             filter: brightness(0%) invert(100%);
@@ -176,6 +203,14 @@ const Leftbar = () => {
         .bottom-icon img {
             height: 30px;
         }
+
+
+        @media screen and (max-width: 767px) {
+  .left-container {
+    display: none;
+  }
+}
+
 
         `}</style>
     </div>

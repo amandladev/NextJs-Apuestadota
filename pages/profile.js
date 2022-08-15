@@ -9,7 +9,7 @@ const Profile = () => {
             <Navbar />
 
             <div className='main--1'>
-                <Leftbar/>
+            <Leftbar classWitdraw='left-container-body-anchor'  c2='left-container-body-anchor' c3='left-container-body-anchor'  c4='left-container-body-anchor  left-body-anchor-active'/>
                 <div className='interface'>
                   
                     <ProfileSettings/>
@@ -26,11 +26,7 @@ const Profile = () => {
                 height: 100vh;
                 overflow-y: hidden;
             }
-            .main--1 {
-                display: grid;
-                grid-template-columns: 1fr 7fr;
-               
-            }
+            
         `}
         </style>
         </div>

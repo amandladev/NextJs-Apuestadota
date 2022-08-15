@@ -234,7 +234,7 @@ section {
     margin-left : 50px;
 }
 
-#myVideo {
+video {
   width: 100%;
 }
 
@@ -389,13 +389,16 @@ section {
 
     .poppins {
         margin: 0;
-        color: #bebebe;
+       
         
         font-family: "Poppins",sans-serif;
     }
 
+    .hgray {
+      color: #bebebe;
+    }
     .font-m {
-      font-size: 16px;
+      font-size: 18px;
     }
 
 /* TERCERA SECCION EMPIEZA AQUI */
@@ -416,9 +419,9 @@ section {
     width: 100%;
     object-fit: cover;
     position: absolute;
-    filter: grayscale(39%) blur(3px);
-    -webkit-filter: grayscale(39%) blur(3px);
-    -moz-filter: grayscale(39%) blur(3px);
+    filter: grayscale(43%) blur(1px);
+    -webkit-filter: grayscale(43%) blur(1px);
+    -moz-filter: grayscale(43%) blur(1px);
     } 
 
   .third-section-intro-content {
@@ -489,6 +492,12 @@ section {
 
 
 /* section 3 termina aqui */
+
+.main--1 {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+
+}
 
 
 .interface {
@@ -575,6 +584,7 @@ section {
 
 .solo--item-content-head {
   padding-bottom: 18px;
+  padding-left: 18px;
   border-bottom: 1px solid rgba(40, 42, 62, 1);
 }
 
@@ -661,7 +671,7 @@ section {
   
 }
 .mode-unactive {
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .mode-unactive h4 {
@@ -689,4 +699,196 @@ section {
 
 .subtitle-active {
   color: #0b0f17!important;
+}
+
+#myVideo2 {
+  display: none;
+}
+
+
+
+
+
+/* WITHDRAW AND DEPOSIT */
+
+.deposit-container {
+  display: flex;
+  
+  margin-left: 2rem;
+}
+
+.deposit-container-item {
+  width: 180px;
+  height: 120px;
+  background-color: #fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #E8E9EB;
+  box-shadow: 0 0 0 transparent;
+  transition: all 250ms;
+}
+
+.withdraw-unacive {
+  opacity: 0.5;
+  backface-visibility: hidden;
+  filter: grayscale(20%);
+}
+
+.deposit-btn-submit {
+  position: relative; 
+  padding: 1rem;
+  margin: 4rem 2rem;
+   
+  background-color: transparent;
+  border: 2px solid #b6ff40;
+  color:#b6ff40;     
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+}
+
+.deposit-btn-submit:hover {
+  background-color: #B6FF40;
+  color: #000;
+}
+
+.green-b {
+  color: #b6ff40;
+}
+
+.withdraw-unacive:hover {
+  opacity: 0.8;
+}
+.w-conditions {
+  color: #fff;
+  margin-left:2rem;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 20px;
+  text-decoration: underline;
+}
+
+.w-conditions:hover {
+  color: #b6ff40;
+}
+
+
+/* 
+MEDIA QUERY MAXW WIDTH 768PX  APLICACION POR DENTRO */
+
+@media (max-width: 768px) {
+  .main--1 { 
+    grid-template-columns: 1fr;
+  }
+  .modes-container {
+  
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    gap: 30px;
+  }
+  .solo--item {
+            grid-template: auto/auto;;                
+  }
+  .solo--item-content-desc p {
+    padding-left: 18px;
+  }
+
+}
+
+
+/* 
+MEDIA QUERY MAXW WIDTH 415PX  */
+
+@media (max-width: 415px) {
+
+  #myVideo {
+    display: none;
+  }
+  #myVideo2 {
+    display: block;
+  }
+                
+  .logo {
+    height: 22px;
+  }
+  .navbar {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .btn {
+    padding: .2em .7em;
+    font-size: 14px;
+  }
+  .intro {
+    top: 7%;
+  }
+
+  .marquee-center {
+    bottom: 17%;
+  }
+
+  .mtop {
+    margin-top: 36%;
+  }
+
+  .second-section-img {
+    display: none;
+  }
+  .second-section {
+    height: 500px;
+    padding-top: 100px;
+  }
+  .mt-ss {
+    margin-top: 20px;
+  }
+
+  .grid-content {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 100px 20px;
+  }
+
+  .title-1 {
+    font-size: 3.2em;
+  }
+
+  .title-2 {
+    font-size: 1em;
+  }
+
+  .info-cont {
+    width: auto;
+  }
+  .info---c {
+    display: block; 
+    /* align-items: center; */
+    /* flex-direction: column; */
+    margin-top: 0; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+}
+
+/* IPHONE 8  */
+@media (max-width: 376px) {
+  .intro {
+    margin-left: 30px;
+  }
+  .title-1 {
+    font-size: 3.2em;
+  }
+  .subtitle-1 {
+    font-size: 1em;
+  }
+  .marquee-center {
+    bottom: 16%;
+  }
+  .font-m {
+    font-size: 15px;
+}
 }

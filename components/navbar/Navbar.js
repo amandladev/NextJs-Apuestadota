@@ -20,19 +20,62 @@ const Navbar = () => {
                 </div>
                 <h4 className="user-name">nombredeusuario</h4>
             </div> */}
-            <div>
+            <div className='log-buttons'>
                 <Link href={'/login'}>
                      <a>
-                        <button className="btn outline">Ingrrresar</button>
+                        <button className="btn outline">Ingresar</button>
                     </a>
                 </Link>
                     
                     
                     <button className="btn btn-md">Registrarse</button>
             </div>
+            <div className='menu-button'>
+                
+                     <a>
+                        <img src='/icons/menu-g.png' alt='menu'/>
+                    </a>
+            
+            </div>
+
+            <div className='menu-navigation-media'>
+                <a>
+                    Juega
+                </a>
+                <a>
+                    Perfil
+                </a>
+                <a>
+                    Deposito
+                </a>
+                <a>
+                    Retiro
+                </a>
+
+                <a>
+                    Soporte
+                </a>       
+
+                <a>
+                    Tutorial
+                </a>   
+
+                <div>
+                    <a>
+                        Ingresar
+                    </a>
+                    <a>
+                        Registrarse 
+                    </a>
+                </div>     
+            </div>
+
 
             <style jsx>
             {`
+            .menu-button {
+                display: none;
+            }
             .logo {
                     height: 30px;
                 }
@@ -63,6 +106,29 @@ const Navbar = () => {
                 font-weight: 300;
                 font-size: 15px;
             }
+
+            @media (max-width: 768px) {
+                .log-buttons {
+                    display: none; 
+                }
+                .logo {
+                    height: 25px;
+                }
+                .navbar {
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                }
+                .menu-button {
+                    display: block;
+                }
+
+                .menu-navigation-media {
+                    position: absolute;
+                    height: 100vh;
+                    background-color: #f12f2f;
+                    transform: translateY(-20px);
+                }
+            }          
         `}
             </style>
         </div>

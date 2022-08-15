@@ -7,20 +7,18 @@ const Dep = () => {
                         DEPOSITAR.
                     </h2> 
 
-                    <h4 className="intro-subtitle">
-                       Selecciona un metodo de pago:
-                    </h4>
+                    
                     <div className="deposit-container">
                         <div className="deposit-container-item" id="method01">
                             <img src="/visa-svg.svg" alt="visa" />
                         </div>
-                        <div className="deposit-container-item" id="method02">
+                        <div className="deposit-container-item withdraw-unacive" id="method02">
                             <img src="/mastercard-svg.svg" alt="visa" />
                         </div>
-                        <div className="deposit-container-item" id="method03">
+                        <div className="deposit-container-item withdraw-unacive" id="method03">
                             <img src="/bitcoin-svg.svg" alt="visa" />
                         </div>
-                       <div className="deposit-container-item" id="method04">
+                       <div className="deposit-container-item withdraw-unacive" id="method04">
                             <img src="/bank-svg.svg" alt="visa" />
                         </div> 
                     </div>
@@ -61,10 +59,16 @@ const Dep = () => {
                             <input type="number" placeholder="Ingresar Monto" />
                         </div>
                     </div>
+                    
 
                     <div>
+                    <span className='deposit-terms-c'>
+                    <input type="checkbox" />
+                    <span className='checkmark'></span>
+                     Acepto los <a className='w-conditions'>terminos y condiciones</a></span>
                         <button className="deposit-btn-submit">Depositar</button>
                     </div>
+                    <a className='w-conditions'> Politica de pago</a>
 
                     <style jsx>
                     {`
@@ -82,11 +86,7 @@ const Dep = () => {
 }
 
 
-.deposit-container {
-    display: flex;
-    gap: 20px;
-    margin-left: 2rem;
-}
+
 
 .deposit-container-item img {
     height:100px;
@@ -152,18 +152,6 @@ const Dep = () => {
     font-weight: 600;
 }
 
-.deposit-btn-submit {
-    position: relative; 
-    padding: 1rem;
-    margin: 4rem 2rem;
-     
-    background-color: transparent;
-    border: 2px solid rgb(6, 255, 89);
-    color: rgb(6, 255, 89);     
-    
-    font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
-}
 
 .deposito-min-max {
     background: #131E2F;
@@ -182,9 +170,62 @@ const Dep = () => {
     font-weight: 600;
 }
 
-.green-b {
-    color: rgb(6, 255, 89);
+.deposit-terms-c {
+    margin-left: 2rem;
 }
+
+.deposit-terms-c input {
+    position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.deposit-terms-c:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.deposit-terms-c input:checked ~ .checkmark {
+  background-color: #b6ff40;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.deposit-terms-c input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.deposit-terms-c .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
                     `}
                     </style>
         </div>

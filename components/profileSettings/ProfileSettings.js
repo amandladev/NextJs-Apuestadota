@@ -1,6 +1,41 @@
 import React from 'react';
+import { useState } from 'react';
 
 const ProfileSettings = () => {
+
+    const [record, setRecord] = useState(false);
+    const [security, setSecurity] = useState(false);
+    const [profile, setProfile] = useState(true);
+
+    const [extra, setExtra] = useState(false);
+
+    const handleClickSecurity = event => {
+        setSecurity(true);
+        setProfile(false);
+        setRecord(false);
+        setExtra(false);
+    }
+    const handleClickRecord = event => {
+        setSecurity(false);
+        setProfile(false);
+        setRecord(true);
+        setExtra(false);
+       
+    }
+
+    const handleClickProfile = event => {
+        setProfile(true);
+        setSecurity(false);
+        setRecord(false);
+        setExtra(false);
+    }
+
+    const handleClickExtra = event => {
+        setProfile(false);
+        setSecurity(false);
+        setRecord(false);
+        setExtra(true);
+    }
     return (
         <div>
             <div className="profile-container">
@@ -21,26 +56,26 @@ const ProfileSettings = () => {
 
                     <div className="profile-main">
                         <nav className="tabs-container">
-                            <a href="#">
-                                <div className="tabs-container-item tab-active" id="info-button-g">
+                            <a href="#" onClick={handleClickProfile}>
+                                <div className={profile ? "tabs-container-item tab-active" : "tabs-container-item"} id="info-button-g">
                                     <img src="/icons/account-details-outline.png" alt="Informacion" />
                                     <h3 className="tab-h-active">Informacion</h3>
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="#" onClick={handleClickRecord}>
                                 <div className="tabs-container-item ">
-                                    <img src="/icons/trophy-outline.png" alt="Record" />
+                                    <img src="/icons/cash-multiple.png" alt="Record" />
                                     <h3>Record</h3>
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="#" onClick={handleClickExtra}>
                                 <div className="tabs-container-item">
                                     <img src="/icons/trophy-outline.png" alt="Torneos" />
-                                    <h3>Torneos</h3>
+                                    <h3>Cuenta</h3>
                                 </div>
                             </a>
-                            <a href="#">
-                                <div className="tabs-container-item" id="info-security-g">
+                            <a href="#" onClick={handleClickSecurity}>
+                                <div className={security ? "tabs-container-item tab-active" : "tabs-container-item"} id="info-security-g">
                                     <img src="/icons/security.png" alt="Seguridad" />
                                     <h3>Seguridad</h3>
                                 </div>
@@ -48,7 +83,7 @@ const ProfileSettings = () => {
                         </nav>
 
                      
-                        <div id="profile-info-g">
+                        <div id="profile-info-g" className={profile ? 'd-block' : 'd-none'}>
                             <h4 className="profile-sub-title">Informacion General</h4>
                             <div className="profile-info-grid">
                                 <div className="profile-info-item">
@@ -100,10 +135,25 @@ const ProfileSettings = () => {
                                 </button>
                             </div>
                         </div>
+
+                        <div className={record ? 'd-block' : 'd-none'}>
+                            <div className='record-dflex'>
+                                <img src='/table.jpg'></img>
+                            </div>
+                            
+                        </div>
+
+
+                        <div className={extra ? 'd-block' : 'd-none'}>
+                            <div className='record-dflex'>
+                                <img src='/infoe.jpg'></img>
+                            </div>
+                            
+                        </div>
                        
           
 
-                        <div id="profile-security-g">
+                        <div className={security ? 'd-block' : 'd-none'}>
                             <h4 className="profile-sub-title">Cambiar de contraseña</h4>
 
                             <div className="profile-password-grid">
@@ -136,9 +186,21 @@ const ProfileSettings = () => {
                 <style jsx>
                 {`
 
-                #profile-security-g {
+.record-dflex {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+                .d-none {
                     display: none;
                 }
+
+                .d-block {
+                    display: block;
+                }
+
                 .profile-container {
                         display: flex;
                         justify-content: space-between;

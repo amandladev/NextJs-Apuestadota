@@ -4,32 +4,30 @@ const With = () => {
     return (
         <div>
                     <h2 className="intro-title">
-                        RETIRAR.
+                        RETIRO DE FONDOS.
                     </h2> 
 
-                    <h4 className="intro-subtitle">
-                       Selecciona un metodo de pago:
-                    </h4>
                     <div className="deposit-container">
                         <div className="deposit-container-item" id="method01">
                             <img src="/visa-svg.svg" alt="visa" />
                         </div>
-                        <div className="deposit-container-item" id="method02">
+                        <div className="deposit-container-item withdraw-unacive" id="method02">
                             <img src="/mastercard-svg.svg" alt="visa" />
                         </div>
-                        <div className="deposit-container-item" id="method03">
+                        <div className="deposit-container-item withdraw-unacive" id="method03">
                             <img src="/bitcoin-svg.svg" alt="visa" />
                         </div>
-                       <div className="deposit-container-item" id="method04">
+                       <div className="deposit-container-item withdraw-unacive" id="method04">
                             <img src="/bank-svg.svg" alt="visa" />
                         </div> 
                     </div>
 
+
                     <div className="deposito-min-max">
-                        <h4>Pago con Visa</h4>
+                        <h4>Retiro con Visa</h4>
                         <h4> <span className="green-b">min. </span>10 USD <span className="green-b">max.</span> 2000 USD </h4>
                     </div>
-
+                    
                         
                     <h4 className="intro-subtitle">
                         Monto de retiro:
@@ -63,9 +61,10 @@ const With = () => {
                     </div>
 
                     <div>
-                        <button className="deposit-btn-submit">Depositar</button>
+                        <button className="deposit-btn-submit">Retirar</button>
                     </div>
 
+                    <a className='w-conditions'> Condiciones de Retirada</a>
                     <style jsx>
                     {`
 
@@ -82,18 +81,14 @@ const With = () => {
 }
 
 
-.deposit-container {
-    display: flex;
-    gap: 20px;
-    margin-left: 2rem;
-}
+
 
 .deposit-container-item img {
     height:100px;
 }
 
 .deposit-active {
-    border: 5px solid rgb(6, 255, 89);
+    border: 5px solid #b6ff40;
 }
 
 .deposit-active img {
@@ -152,18 +147,6 @@ const With = () => {
     font-weight: 600;
 }
 
-.deposit-btn-submit {
-    position: relative; 
-    padding: 1rem;
-    margin: 4rem 2rem;
-     
-    background-color: transparent;
-    border: 2px solid rgb(6, 255, 89);
-    color: rgb(6, 255, 89);     
-    
-    font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
-}
 
 .deposito-min-max {
     background: #131E2F;
@@ -182,9 +165,9 @@ const With = () => {
     font-weight: 600;
 }
 
-.green-b {
-    color: rgb(6, 255, 89);
-}
+
+
+
                     `}
                     </style>
         </div>

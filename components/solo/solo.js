@@ -4,36 +4,23 @@ import { useState, useEffect } from 'react';
 
 const Solo = () => {
 
-    // const [open, setOpen] = useState(true);
+    const [active, setActive] = useState(false);
 
-    // if(typeof window !== 'undefined') {
-    //     var buttonO = document.getElementById('openbutton');
-    //     var buttonC = document.getElementById('closebutton');
-    //     var solo = document.getElementById('sss');
-    // }
-
-    //     function openW() {    
-    //         solo.style.visibility = 'visible';
-    //         solo.classList.remove('scaledowntop');
-    //         solo.classList.add('scaleuptr');
-    //         setOpen(false);
-    //     }
-    //     function closeW() {
-            
-    //         solo.classList.remove('scaleuptr');
-    //         solo.classList.add('scaledowntop');
-    //         setOpen(true);
-    //     }
+    const handleClick = event => {
+        // 👇️ toggle isActive state on click
+        setActive(current => !current);
+        
+      };
 
            
     
     return (
         <>
-              <div className="sss" id="sss">
+              <div className={active ? 'sss scaleuptr visible' : 'sss scaledowntop'} id="sss">
                         <div className="mode-create-lobby">
-                            <img src="/close-w.png" alt="close" id="closebutton" />
+                            <img src="/icons/close-w.png" alt="close" id="closebutton"  onClick={handleClick}/>
                             
-                            <h4 className="bold-center mb-sm subtitle-modes">Elige el monto de tu apuesta</h4>
+                            <h4 className="mb-sm subtitle-modes">Elige el monto de tu apuesta</h4>
                             <div className="mode-solo-amount"> 
                                 <div className="mode-solo-amount-inp">
                                     <div className="question-mark">
@@ -86,7 +73,7 @@ const Solo = () => {
                                           </p>
                                     </div>
                                     <div className="solo--item-content-button">
-                                        <a href="#" className="solo--btn-c" id="openbutton">Iniciar</a>
+                                        <a href="#" className="solo--btn-c" id="openbutton" onClick={handleClick}>Iniciar</a>
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +88,6 @@ const Solo = () => {
 
 
 
-
 /* crear apuesta - MODO SOLO */
 
 .sss {
@@ -109,12 +95,112 @@ const Solo = () => {
     width: 100%;
     height: 100%;  
     background-color: rgba(55, 55, 55, 0.631);
-    
+    top:-5%;
     z-index: 5;
     display: flex;
     justify-content: center;
     visibility: hidden;
     align-items: flex-start;
+}
+
+.subtitle-modes {
+    color: #fff;
+    /* text-align: center; */
+    font-size: 25px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.mb-sm {
+    margin-bottom: 20px;
+}
+
+.mode-solo-amount {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mode-solo-amount-inp {
+    background-color: #0e1018;
+    width: 320px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.question-mark {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+}
+
+.mode-solo-amount div h3 {
+    font-size: 22px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.mode-solo-amount-btn {
+    width: 320px;
+    border-radius: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.large-btn {
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #0e1018;
+    border: none;
+    color: #fff;
+    width: 50%;
+}
+
+.start-game-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.start-game-btn {
+    background-color: #B6FF40;
+    color: #081325;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+    line-height: 28px;
+    width: 370px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+.lighterr {
+    font-weight: 300;
+}
+
+
+.visible {
+    visibility: visible!important;;    
 }
 
 .scaleuptr {
@@ -206,6 +292,14 @@ const Solo = () => {
       -webkit-transform-origin: 100% 0%;
               transform-origin: 100% 0%;
     }
+  }
+
+  @media (max-width: 768px) {
+    .mode-create-lobby {
+        
+        margin-top: 20%;
+      
+}
   }
             `}</style>
         </>

@@ -49,6 +49,10 @@ const Home = () => {
                   <source src="esports_on_demand.mp4" type="video/mp4"/>
                   Your browser does not support the video tag.
               </video>
+              <video autoPlay muted loop id="myVideo2">
+                  <source src="verticalmp4.mp4" type="video/mp4"/>
+                  Your browser does not support the video tag.
+              </video>
               
           <div>
           <div className="marquee-center"> 
@@ -62,7 +66,7 @@ const Home = () => {
           </div>
           <h1 className="title-1 cursive center mtop">
                       <span className="blue">CóMO</span> EMPEZAR ?
-                      <p className="poppins center font-m"> Apuesta y aprovecha al maximo tus habilidades doteras. </p>
+                      <p className="poppins center font-m hgray"> Apuesta y aprovecha al maximo tus habilidades doteras. </p>
                   </h1>
             
           </section>
@@ -74,7 +78,7 @@ const Home = () => {
                       <div className="second-section-img" >
                       <img src="heros/invoker.png" alt="lion" id="id-single-img" />
                       </div>
-                      <div>
+                      <div className='mt-ss'>
                           <div className="info-cont">
                               <h3 className="title-2 cursive"><span className="blue">1.</span> APUESTA A TU PROPIA PARTIDA DE RANKED</h3>
                               {/* <p className="poppins">Sacale provecho a tus habilidades </p> */}
@@ -132,7 +136,7 @@ const Home = () => {
 
           <section className="third-section">
               <div   className="third-section-large-header">
-                <img src="earth-banner.jpg" alt="sas" className="top-image" />
+                <img src="aa-banner.jpg" alt="sas" className="top-image" />
 
                 <div className="third-section-intro-content">
                       <h1 className="title-1 cursive center">
@@ -149,11 +153,11 @@ const Home = () => {
                                 
                             </div>
                             <div className="info-cont">
-                                <h3 className="title-2 cursive"><span className="purple">2.</span>HAZ UN DEPOSITO DESDE 10 DOLARES </h3>
+                                <h3 className="title-2 cursive"><span className="blue">2.</span>HAZ UN DEPOSITO DESDE 10 DOLARES </h3>
                     
                             </div>
                             <div className="info-cont">
-                                <h3 className="title-2 cursive"><span className="purple">3.</span> RETIRA TUS GANANCIAS Y DISFRUTA DE TU EXITO</h3>
+                                <h3 className="title-2 cursive"><span className="blue">3.</span> RETIRA TUS GANANCIAS Y DISFRUTA DE TU EXITO</h3>
                                 
                             </div>
 
