@@ -49,10 +49,7 @@ const Home = () => {
                   <source src="esports_on_demand.mp4" type="video/mp4"/>
                   Your browser does not support the video tag.
               </video>
-              <video autoPlay muted loop id="myVideo2">
-                  <source src="verticalmp4.mp4" type="video/mp4"/>
-                  Your browser does not support the video tag.
-              </video>
+              <img src='vertical-p.jpg' id='myVideo2'/>
               
           <div>
           <div className="marquee-center"> 

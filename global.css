@@ -824,6 +824,7 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   #myVideo2 {
     display: block;
     transform: translateY(-60px);
+    width: 100%;
   }
                 
   .logo {
@@ -843,7 +844,7 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   }
 
   .marquee-center {
-    bottom: 17%;
+    bottom: 31%;
   }
 
   .mtop {
@@ -868,7 +869,11 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   }
 
   .title-1 {
-    font-size: 3.2em;
+    font-size: 3em;
+    line-height: 52px;
+  }
+  .subtitle-1 {
+    font-size: 0.8em;
   }
 
   .title-2 {
@@ -889,6 +894,9 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   .third-section {
     margin-top: 20%;
   } 
+  .p-animatedtext {
+    font-size: 0.8em;
+  }
 }
 
 /* IPHONE 8  */
@@ -897,13 +905,8 @@ MEDIA QUERY MAXW WIDTH 415PX  */
     margin-left: 30px;
     top:2%;
   }
-  .title-1 {
-    font-size: 3em;
-    line-height: 60px;
-  }
-  .subtitle-1 {
-    font-size: 1em;
-  }
+
+
   .marquee-center {
     bottom: 16%;
   }
