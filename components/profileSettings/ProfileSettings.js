@@ -84,55 +84,53 @@ const ProfileSettings = () => {
 
                      
                         <div id="profile-info-g" className={profile ? 'd-block' : 'd-none'}>
-                            <h4 className="profile-sub-title">Informacion General</h4>
-                            <div className="profile-info-grid">
-                                <div className="profile-info-item">
-                                    <label >Nombre de Usuario</label>
-                                    <div>
-                                        <input type="text"  className="profile-info-output" defaultValue={"nombredeusuario"} />
-                                    </div>
-                                </div>
-        
-                                <div className="profile-info-item">
-                                    <label>Nombre y Apellido</label>
-                                    <div>
-                                        <input type="text" className="profile-info-output" defaultValue={"Sergio Antonio Reyes"} />
-                                    </div>
-                                </div>
-        
-                                <div className="profile-info-item">
-                                    <label >Email</label>
-                                    <div>
-                                        <input type="text" className="profile-info-output" defaultValue={"sreyescurotto@gmail.com"} />
-                                    </div>
-                                </div>
-        
-                                <div className="profile-info-item">
-                                    <label>Documento de identidad</label>
-                                    <div>
-                                        <input type="text" className="profile-info-output" defaultValue={"74629686"} />
-                                    </div>
-                                </div>
-        
-                                <div className="profile-info-item">
-                                    <label >Fecha de nacimiento</label>
-                                    <div>
-                                        <input type="text" className="profile-info-output" defaultValue={"19/06/1996"} />
-                                    </div>
-                                </div> 
-        
-                                <div className="profile-info-item">
-                                    <label>Telefono</label>
-                                    <div>
-                                        <input type="text" className="profile-info-output" defaultValue={"935301021"} />
-                                    </div>
+                        <div className='security-flex-b'>
+                                <div className='gc-profile-box'>
+                                    <h4 className='gc-profile-title'>General</h4>
+                                    <ul className='gc-profile-list'>
+                                        <li className='gc-profile-list-item'>
+                                            <h6 className='gc-list-title'>Nombre de Usuario</h6>
+                                            <p className='gc-list-text'>Sergio1212</p>
+                                        </li>
+                                        <li className='gc-profile-list-item'>
+                                            <h6 className='gc-list-title'>Nombre</h6>
+                                            <p className='gc-list-text'>Sergio</p>
+                                        </li>
+                                        <li className='gc-profile-list-item'>
+                                            <h6 className='gc-list-title'>Email</h6>
+                                            <p className='gc-list-text'>Sergio</p>
+                                        </li>
+                                        <li className='gc-profile-list-item'>
+                                            <h6 className='gc-list-title'>Documento de Identidad</h6>
+                                            <p className='gc-list-text'>12524141</p>
+                                        </li>
+                                        
+                                    </ul>
                                 </div>
 
+                                <div className='gc-profile-box'>
+                                    <h4 className='gc-profile-title'>Extra</h4>
+                                    <ul className='gc-profile-list'>
+                                        <li className='gc-profile-list-item'>
+                                            <h6 className='gc-list-title'>Fecha de registro</h6>
+                                            <p className='gc-list-text'>15/08/2022</p>
+                                        </li>
+                                        <li className='gc-profile-list-item'>
+                                            <h6 className='gc-list-title'>Steam ID</h6>
+                                            <p className='gc-list-text'>56465465</p>
+                                        </li>
+                                        <li className='gc-profile-list-item'>
+                                            <h6 className='gc-list-title'>Steam ID 64</h6>
+                                            <p className='gc-list-text blue'>76561198383349833</p>
+                                        </li>
+                                        <li className='gc-profile-list-item'>
+                                            <h6 className='gc-list-title'>Documento de Identidad</h6>
+                                            <p className='gc-list-text'>12524141</p>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
 
-                                <button className="profile-info-submit"> 
-                                    Guardar
-                                   
-                                </button>
                             </div>
                         </div>
 
@@ -153,38 +151,81 @@ const ProfileSettings = () => {
                        
           
 
-                        <div className={security ? 'd-block' : 'd-none'}>
-                            <h4 className="profile-sub-title">Cambiar de contraseña</h4>
-
-                            <div className="profile-password-grid">
-                                <div className="profile-password-item">
-                                    <div>
-                                        <input type="text"  className="profile-password-output" defaultValue={"Contraseña Actual"} />
-                                    </div>
-                                </div>
-        
-                                <div className="profile-password-item">
-                                    <div>
-                                        <input type="text" className="profile-password-output" defaultValue={"Nueva Contraseña"} />
-                                    </div>
-                                </div>
-        
-                                <div className="profile-password-item">
-                                    <div>
-                                        <input type="text" className="profile-password-output" defaultValue={"Confirmar Nueva Contraseña"} />
-                                    </div>
-                                </div>
-
-                                <button className="profile-password-submit"> 
-                                    Guardar
-                                    
-                                </button>
-                            </div>
+                        <div className={security ? 'd-block' : 'd-none'}>\
+                            
+                            
                         </div>
                 </div>
 
                 <style jsx>
                 {`
+
+                {/* informacion */}
+
+        .security-flex-b {
+            display:flex;
+            padding: 1.5rem 3rem;
+        }
+
+        .gc-profile-box {
+            padding: 24px;
+            margin: 8px;
+            background-image: linear-gradient(to bottom,#161629 32px,rgba(22,22,41,0));
+            border: 1px solid transparent;
+            border-bottom-width: 0;
+            border-image: linear-gradient(to bottom,rgba(255,255,255,.1),rgba(255,255,255,0)) 1;
+            flex-basis: 50%;
+        }
+
+        .gc-profile-title {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+
+        .gc-profile-list-item {
+            display: flex;
+            flex-flow: row-reverse nowrap; 
+            align-items: center; 
+            justify-content: space-between;
+            min-height: 48px;
+            margin: 0;
+            padding: 8px 16px;
+            list-style: none;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgba(0,0,0,.05);
+            border-bottom: 1px solid rgba(0,0,0,.1);
+        }
+
+        .gc-list:not(:first-child) {
+            margin-top: 20px;
+        }
+        .gc-list-item:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+        .gc-list-title {
+            margin: 0;
+            margin-bottom: 4px;
+            font-size: 10px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: .25;
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .gc-list-text {
+            margin: 0;
+            padding-right: 8px;
+            font-size: 12px;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+        }
 
         .record-dflex {
             width: 100%;
@@ -193,6 +234,8 @@ const ProfileSettings = () => {
             justify-content: center;
             align-items: center;
         }
+
+
                 .d-none {
                     display: none;
                 }
@@ -402,10 +445,14 @@ const ProfileSettings = () => {
 
 {/* MEDIA QUERYS */}
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
+
+    
 
     .profile-container {
-        padding: 0.5rem;
+        padding: 1rem .5rem;
+        width: 90%;
+        justify-content: space-around;
     }
 
     .profile-intro-i {
@@ -422,11 +469,39 @@ const ProfileSettings = () => {
         font-size: 13px;
     }
 
-    .profiel-green-q {
+    .profile-green-q {
         padding: 0.25rem .5rem;
     }
-    .profiel-green-q h4 {
+    .profile-green-q h4 {
         font-size: 10px;
+    }
+
+    .tabs-container a {
+        flex-basis: 40%;
+    }
+    .tabs-container-item h3 {
+        font-size: 12px;
+    }
+    .tabs-container-item img {
+        display: none;
+    }
+
+    .profile-sub-title {
+        padding: 1rem 2rem 1rem;
+        font-size: 18px;    
+    }
+
+    .gc-profile-list-item {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+
+    {/* NEW SECURITY */}
+    .security-flex-b {
+        padding: 1rem 1rem;
+        flex-direction: column;
     }
 }
                 `}

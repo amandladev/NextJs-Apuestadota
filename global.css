@@ -42,6 +42,10 @@ section {
   font-weight: bold;
 }
 
+li {
+  list-style: none;
+}
+
 
 
 /* ===== Scrollbar CSS ===== */
@@ -905,10 +909,13 @@ MEDIA QUERY MAXW WIDTH 415PX  */
     margin-left: 30px;
     top:2%;
   }
+  .second-section {
+    margin-top: 60px;
+  }
 
 
   .marquee-center {
-    bottom: 16%;
+    bottom: 32%;
   }
   .p-animatedtext {
     margin-top: 0.5rem;

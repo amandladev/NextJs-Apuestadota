@@ -188,7 +188,7 @@ const With = () => {
     margin-top: -75px;
 }
 }
-@media (max-width: 375px) {
+@media (max-width: 415px) {
                     .deposit-container {
                         margin-left: 27%;
                     }

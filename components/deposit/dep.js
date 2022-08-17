@@ -202,7 +202,7 @@ const Dep = () => {
 
                 }
 
-                @media (max-width: 375px) {
+                @media (max-width: 415px) {
                     .deposit-container {
                         margin-left: 27%;
                     }

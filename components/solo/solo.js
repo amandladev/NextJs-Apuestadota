@@ -299,25 +299,25 @@ const Solo = () => {
         
         margin-top: 20%;
       
-}
+    }
   }
-    @media (max-width: 375px) { 
+    @media (max-width: 415px) { 
         .mode-create-lobby {
-            margin-top: 14%;
+            margin-top: 70%;
             padding: 50px 22px;
-    }
-    .mode-solo.amount h3 {
-        font-size: 18px;
-    }
-    .subtitle-modes {
-        font-size: 16px;   
-        margin-left: 30px; 
-    }
+        }
+        .mode-solo.amount h3 {
+            font-size: 18px;
+        }
+        .subtitle-modes {
+            font-size: 16px;   
+            margin-left: 30px; 
+        }
 
-    .start-game-btn {
-        font-size: 20px;
-        width: 310px;
-    }
+        .start-game-btn {
+            font-size: 20px;
+            width: 310px;
+        }
     }
             `}</style>
         </>
