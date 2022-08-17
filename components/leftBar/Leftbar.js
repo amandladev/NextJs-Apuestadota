@@ -10,7 +10,7 @@ const Leftbar = (classWitdraw, c2, c3, c4) => {
             <div className="left-container-header">
                 <div className="pad--s">
                     <h3 className="left-container-h3">Tu Saldo:</h3>
-                    <h3 className="left-container-h3 left-flex-container-h"> <img src='/icons/currency-usd-g.png' className='dollar--svg'></img><span className="fontw-l"> 120.00</span></h3>
+                    <h3 className="left-container-h3 left-flex-container-h"> <img src='/icons/currency-usd-g.png' className='dollar--svg'></img><span className="fontw-l"> 00.00</span></h3>
                 </div>
 
                 <Link href={'/extra'}>

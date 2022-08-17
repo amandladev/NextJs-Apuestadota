@@ -63,13 +63,13 @@ const ProfileSettings = () => {
                                 </div>
                             </a>
                             <a href="#" onClick={handleClickRecord}>
-                                <div className="tabs-container-item ">
+                                <div className={record ? "tabs-container-item tab-active" : "tabs-container-item"}>
                                     <img src="/icons/cash-multiple.png" alt="Record" />
-                                    <h3>Record</h3>
+                                    <h3>Historial</h3>
                                 </div>
                             </a>
                             <a href="#" onClick={handleClickExtra}>
-                                <div className="tabs-container-item">
+                                <div className={extra ? "tabs-container-item tab-active" : "tabs-container-item"}>
                                     <img src="/icons/trophy-outline.png" alt="Torneos" />
                                     <h3>Cuenta</h3>
                                 </div>
@@ -98,7 +98,7 @@ const ProfileSettings = () => {
                                         </li>
                                         <li className='gc-profile-list-item'>
                                             <h6 className='gc-list-title'>Email</h6>
-                                            <p className='gc-list-text'>Sergio</p>
+                                            <p className='gc-list-text'>sreyescurotto@gmail.com</p>
                                         </li>
                                         <li className='gc-profile-list-item'>
                                             <h6 className='gc-list-title'>Documento de Identidad</h6>
@@ -135,26 +135,121 @@ const ProfileSettings = () => {
                         </div>
 
                         <div className={record ? 'd-block' : 'd-none'}>
-                            {/* <div className='record-dflex'>
-                                <img src='/table.jpg'></img>
-                            </div> */}
-                            
+                        <div className='history-flex-c'>
+                            <h4 className='gc-profile-title'>Solicitud para la retirada de fondos</h4>
+                            <table>
+                                <tr>
+                                    <th>
+                                        Fecha
+                                    </th>
+                                    <th>
+                                        Importe
+                                    </th>
+                                    <th>
+                                        Comision
+                                    </th>
+                                    <th>
+                                        Estado
+                                    </th>
+                                    <th>
+                                        Medio
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>    
+                                        15/08/2022
+                                    </td>
+                                    <td>    
+                                        $120
+                                    </td>   
+                                    <td>
+                                        __
+                                    </td>
+                                    <td>
+                                        <span className='gc-green-text'>Terminado</span>
+                                    </td>
+                                    <td>
+                                        <span className='gc-green-text'>Visa **2997</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>    
+                                        12/08/2022
+                                    </td>
+                                    <td>    
+                                        $10
+                                    </td>   
+                                    <td>
+                                        __
+                                    </td>
+                                    <td>
+                                        <span className='gc-green-text'>Terminado</span>
+                                    </td>
+                                    <td>
+                                        <span className='gc-green-text'>Mastercard **9775</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>    
+                                        10/08/2022
+                                    </td>
+                                    <td>    
+                                        $20
+                                    </td>   
+                                    <td>
+                                        __
+                                    </td>
+                                    <td>
+                                        <span className='gc-green-text'>Terminado</span>
+                                    </td>
+                                    <td>
+                                        <span className='gc-green-text'>Mastercard **9775</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
                         </div>
+                      
 
 
                         <div className={extra ? 'd-block' : 'd-none'}>
                             {/* <div className='record-dflex'>
                                 <img src='/infoe.jpg'></img>
                             </div> */}
-                            
-                        </div>
-                       
+                        </div> 
+                     
           
 
-                        <div className={security ? 'd-block' : 'd-none'}>\
+                        <div className={security ? 'd-block' : 'd-none'}>
                             
-                            
+                            <h4 className="profile-sub-title">Cambiar de contraseña</h4>
+
+                            <div className="profile-password-grid">
+                                <div className="profile-password-item">
+                                    <div>
+                                        <input type="text"  className="profile-password-output" defaultValue={"Contraseña Actual"} />
+                                    </div>
+                                </div>
+
+                                <div className="profile-password-item">
+                                    <div>
+                                        <input type="text" className="profile-password-output" defaultValue={"Nueva Contraseña"} />
+                                    </div>
+                                </div>
+
+                                <div className="profile-password-item">
+                                    <div>
+                                        <input type="text" className="profile-password-output" defaultValue={"Confirmar Nueva Contraseña"} />
+                                    </div>
+                                </div>
+
+                                <button className="profile-password-submit"> 
+                                    Guardar
+                                    
+                                </button>
+                            </div>
                         </div>
+                        
                 </div>
 
                 <style jsx>
@@ -442,10 +537,45 @@ const ProfileSettings = () => {
 
 
 
+{/* TABLA DE HISTORIAL */}
+
+.history-flex-c {    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.history-flex-c h4 {
+            margin-top: 20px;
+            text-align: center;
+}
+
+table {
+    border: 1px solid transparent;
+    background-image: linear-gradient(to bottom,#161629 32px,rgba(22,22,41,0));
+    border-image: linear-gradient(to bottom,rgba(255,255,255,.1),rgba(255,255,255,0))1;
+    padding: 20px;
+    margin: 1rem 2rem;
+
+}
+
+th {
+    color: #fff;
+    opacity: 0.48;
+}
+td {
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+th, td {
+    font-family: 'Roboto Mono', monospace;
+}
+
 
 {/* MEDIA QUERYS */}
 
-@media (max-width: 415px) {
+@media (max-width: 480px) {
 
     
 

@@ -25,7 +25,10 @@ const With = () => {
 
                     <div className="deposito-min-max">
                         <h4>Retiro con Visa</h4>
-                        <h4> <span className="green-b">min. </span>10 USD <span className="green-b">max.</span> 2000 USD </h4>
+                        <div className='deposit-min-max-sl'>
+                            <h4><span className="green-b">min. </span>10 USD </h4>
+                            <h4><span className="green-b">max.</span> 2000 USD </h4>
+                        </div>
                     </div>
                     
                         
@@ -121,6 +124,10 @@ const With = () => {
     height: 50px;
     position: relative;
 }
+.deposit-min-max-sl {
+                    display:flex;
+                    gap: 10px;
+}
 
 .deposito-amonunt-item h4 {
     text-align: center;
@@ -188,7 +195,7 @@ const With = () => {
     margin-top: -75px;
 }
 }
-@media (max-width: 415px) {
+@media (max-width: 480px) {
                     .deposit-container {
                         margin-left: 27%;
                     }

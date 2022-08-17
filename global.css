@@ -816,7 +816,7 @@ MEDIA QUERY MAXW WIDTH 768PX  APLICACION POR DENTRO */
 /* 
 MEDIA QUERY MAXW WIDTH 415PX  */
 
-@media (max-width: 415px) {
+@media (max-width: 480px) {
 
   .first-section {
     height: 90vh;
@@ -872,13 +872,7 @@ MEDIA QUERY MAXW WIDTH 415PX  */
     margin: 100px 20px;
   }
 
-  .title-1 {
-    font-size: 3em;
-    line-height: 52px;
-  }
-  .subtitle-1 {
-    font-size: 0.8em;
-  }
+ 
 
   .title-2 {
     font-size: 1em;
@@ -898,13 +892,16 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   .third-section {
     margin-top: 20%;
   } 
-  .p-animatedtext {
-    font-size: 0.8em;
-  }
+ 
 }
 
 /* IPHONE 8  */
-@media (max-width: 376px) {
+@media (max-width: 415px) {
+
+  .title-1 {
+    font-size: 3em;
+    line-height: 52px;
+  }
   .intro {
     margin-left: 30px;
     top:2%;
@@ -933,4 +930,12 @@ MEDIA QUERY MAXW WIDTH 415PX  */
 .m-bot {
   margin-bottom: 1rem;
 }
+.p-animatedtext {
+  font-size: 0.8em;
+}
+
+.subtitle-1 {
+  font-size: 0.8em;
+}
+
 }
