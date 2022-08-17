@@ -5,19 +5,20 @@ import ProfileSettings from '../components/profileSettings/ProfileSettings';
 
 const Profile = () => {
     return (
-        <div className='mode-play'>
-            <Navbar />
+        <>
+            <div className='mode-play'>
+                <Navbar />
 
-            <div className='main--1'>
-            <Leftbar classWitdraw='left-container-body-anchor'  c2='left-container-body-anchor' c3='left-container-body-anchor'  c4='left-container-body-anchor  left-body-anchor-active'/>
-                <div className='interface'>
-                  
-                    <ProfileSettings/>
+                <div className='main--1'>
+                <Leftbar classWitdraw='left-container-body-anchor'  c2='left-container-body-anchor' c3='left-container-body-anchor'  c4='left-container-body-anchor  left-body-anchor-active'/>
+                    <div className='interface'>
+                    
+                        <ProfileSettings/>
+                    </div>
+                    
                 </div>
                 
             </div>
-            
-        
 
         <style jsx>
         {`
@@ -33,10 +34,15 @@ const Profile = () => {
                 overflow-x: hidden;
                 overflow-y: scroll;
             }
-    }
+        }
+        @media (max-width: 375px) {
+            .interface {
+                width: 375px;
+            }
+        }
         `}
         </style>
-        </div>
+        </>
       
     );
 }

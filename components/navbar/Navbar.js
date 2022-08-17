@@ -2,10 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
 
-
-
 const Navbar = () => {
-
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -225,7 +222,13 @@ const Navbar = () => {
                 .menu-navigation-btn a:hover {
                     background-color: #ebfbd1;
                 }
-            }          
+            }    
+            @media (max-width: 376px) { 
+
+                .menu-navigation-media {
+                    margin: 30px 19px;
+            }     
+        } 
         `}
             </style>
         </>

@@ -2,12 +2,10 @@ import React from 'react';
 
 const Dep = () => {
     return (
-        <div>
+        <>
                     <h2 className="intro-title">
                         DEPOSITAR.
-                    </h2> 
-
-                    
+                    </h2>      
                     <div className="deposit-container">
                         <div className="deposit-container-item" id="method01">
                             <img src="/visa-svg.svg" alt="visa" />
@@ -25,7 +23,11 @@ const Dep = () => {
 
                     <div className="deposito-min-max">
                         <h4>Pago con Visa</h4>
-                        <h4> <span className="green-b">min. </span>10 USD <span className="green-b">max.</span> 2000 USD </h4>
+                        <div className='deposit-min-max-sl'>
+                            <h4><span className="green-b">min. </span>10 USD </h4>
+                            <h4><span className="green-b">max.</span> 2000 USD </h4>
+                        </div>
+                        
                     </div>
 
                         
@@ -61,13 +63,14 @@ const Dep = () => {
                     </div>
                     
 
-                    <div>
-                    <span className='deposit-terms-c'>
-                    
-                     Acepto los <a className='w-conditions'>terminos y condiciones</a></span>
-                        <button className="deposit-btn-submit">Depositar</button>
+                    <div className='deposit-terms-container'>
+                        <span className='deposit-terms-c w-conditions'>
+                        
+                        Acepto los <a className='w-conditions underline'>terminos y condiciones</a></span>
+                            <button className="deposit-btn-submit">Depositar</button>
+                            <a className='w-conditions underline m-left m-bot'> Politica de pago</a>
                     </div>
-                    <a className='w-conditions'> Politica de pago</a>
+                    
 
                     <style jsx>
                     {`
@@ -146,8 +149,6 @@ const Dep = () => {
                     font-size: 16px;
                     font-weight: 600;
                 }
-
-
                 .deposito-min-max {
                     background: #131E2F;
                     border-radius: 10px;
@@ -157,18 +158,20 @@ const Dep = () => {
                     display: flex;
                     justify-content: space-between;
                 }
-
                 .deposito-min-max h4 {
                     color: #fff;
                     font-family: 'Roboto Mono', monospace;
                     font-size: 16px;
                     font-weight: 600;
                 }
-
+                .deposit-min-max-sl {
+                    display:flex;
+                    gap: 10px;
+                }
                 .deposit-terms-c {
                     margin-left: 2rem;
+                    margin-top: 1rem;
                 }
-
                 .deposit-terms-c input {
                     position: absolute;
                 opacity: 0;
@@ -176,78 +179,51 @@ const Dep = () => {
                 height: 0;
                 width: 0;
                 }
-
-                .checkmark {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 25px;
-                width: 25px;
-                background-color: #eee;
+                .deposit-terms-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;    
                 }
-                .deposit-terms-c:hover input ~ .checkmark {
-                background-color: #ccc;
-                }
-
-                /* When the checkbox is checked, add a blue background */
-                .deposit-terms-c input:checked ~ .checkmark {
-                background-color: #b6ff40;
-                }
-
-                .checkmark:after {
-                content: "";
-                position: absolute;
-                display: none;
-                }
-
-                /* Show the checkmark when checked */
-                .deposit-terms-c input:checked ~ .checkmark:after {
-                display: block;
-                }
-
-                /* Style the checkmark/indicator */
-                .deposit-terms-c .checkmark:after {
-                left: 9px;
-                top: 5px;
-                width: 5px;
-                height: 10px;
-                border: solid white;
-                border-width: 0 3px 3px 0;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-                }
-
 
                 @media (max-width: 768px) {
-
                     .intro-title {
                         font-size: 3rem;
                     }
-
                     .deposit-container {
                         flex-direction: column; 
                         margin-left: 30%;
-                       
                     }
                     .deposito-min-max {
                         width: 90%;
                 }
-
-
                     .deposit-amount {
                         flex-wrap: wrap;
                     }
 
-                    .help-c {
-                        margin-top: -75px;
+                }
+
+                @media (max-width: 375px) {
+                    .deposit-container {
+                        margin-left: 27%;
                     }
+                    .deposito-min-max {
+                        margin: 4rem 1rem;
+                    }
+                    .deposito-min-max h4 {
+                        font-size: 12px;
+                    }
+
+                    .deposit-amount h4 {
+                        font-size: 14px;    
+                    }
+
+                  
                 }
 
 
                     `}
                     </style>
-        </div>
+        </>
     );
 }
 

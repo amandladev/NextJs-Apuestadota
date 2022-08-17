@@ -2,7 +2,7 @@ import React from 'react';
 
 const With = () => {
     return (
-        <div>
+        <>
                     <h2 className="intro-title">
                         RETIRO DE FONDOS.
                     </h2> 
@@ -64,7 +64,7 @@ const With = () => {
                         <button className="deposit-btn-submit">Retirar</button>
                     </div>
 
-                    <a className='w-conditions'> Condiciones de Retirada</a>
+                    <a className='w-conditions m-left underline m-bot'> Condiciones de Retirada</a>
                     <style jsx>
                     {`
 
@@ -188,12 +188,29 @@ const With = () => {
     margin-top: -75px;
 }
 }
+@media (max-width: 375px) {
+                    .deposit-container {
+                        margin-left: 27%;
+                    }
+                    .deposito-min-max {
+                        margin: 4rem 1rem;
+                    }
+                    .deposito-min-max h4 {
+                        font-size: 12px;
+                    }
+
+                    .deposit-amount h4 {
+                        font-size: 14px;    
+                    }
+
+                  
+                }
 
 
 
                     `}
                     </style>
-        </div>
+        </>
     );
 }
 

@@ -738,7 +738,7 @@ video {
 .deposit-btn-submit {
   position: relative; 
   padding: 1rem;
-  margin: 4rem 2rem;
+  margin: 2.5rem 2rem;
    
   background-color: transparent;
   border: 2px solid #b6ff40;
@@ -762,18 +762,25 @@ video {
 }
 .w-conditions {
   color: #fff;
-  margin-left:2rem;
+  
   font-weight: 500;
   font-size: 12px;
   font-family: 'Roboto Mono', monospace;
   letter-spacing: 0;
   text-align: center;
   line-height: 20px;
+}
+
+.underline {
   text-decoration: underline;
 }
 
 .w-conditions:hover {
   color: #b6ff40;
+}
+
+.m-left {
+  margin-left:2rem;
 }
 
 
@@ -888,9 +895,11 @@ MEDIA QUERY MAXW WIDTH 415PX  */
 @media (max-width: 376px) {
   .intro {
     margin-left: 30px;
+    top:2%;
   }
   .title-1 {
-    font-size: 3.2em;
+    font-size: 3em;
+    line-height: 60px;
   }
   .subtitle-1 {
     font-size: 1em;
@@ -898,10 +907,20 @@ MEDIA QUERY MAXW WIDTH 415PX  */
   .marquee-center {
     bottom: 16%;
   }
+  .p-animatedtext {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
   .font-m {
     font-size: 15px;
-}
+  }
+  .mtop {
+    margin-top: 0;
+  }
 .third-section {
   margin-bottom: 120px;
+}
+.m-bot {
+  margin-bottom: 1rem;
 }
 }

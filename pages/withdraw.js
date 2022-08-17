@@ -6,20 +6,21 @@ import With from '../components/with/with';
 
 const Withdraw = () => {
     return (
-        <div className='mode-play'>
-            <Navbar />
+        <>
+            <div className='mode-play'>
+                <Navbar />
 
-            <div className='main--1'>
-                <Leftbar classWitdraw={'left-container-body-anchor left-body-anchor-active'}  c2={'left-container-body-anchor'} c3={'left-container-body-anchor'}  c4={'left-container-body-anchor'}/>
-                <div className='interface'>
-                    <With/>
+                <div className='main--1'>
+                    <Leftbar classWitdraw={'left-container-body-anchor left-body-anchor-active'}  c2={'left-container-body-anchor'} c3={'left-container-body-anchor'}  c4={'left-container-body-anchor'}/>
+                    <div className='interface'>
+                        <With/>
 
-                    <img className='help-c' src='/icons/help-with-circ.svg'></img>
+                        <img className='help-c' src='/icons/help-with-circ.svg'></img>
+                    </div>
+                    
                 </div>
                 
             </div>
-            
-        
 
         <style jsx>
         {`
@@ -47,10 +48,13 @@ const Withdraw = () => {
                 overflow-x: hidden;
                 overflow-y: scroll;
             }
+            .help-c {
+                        margin-top: -60px;
+                    }
     }
         `}
         </style>
-        </div>
+        </>
     );
 }
 

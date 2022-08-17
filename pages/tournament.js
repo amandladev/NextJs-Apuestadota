@@ -6,7 +6,7 @@ import Tourn from '../components/tourn/tourn';
 
 const Tournament = () => {
     return (
-        
+        <>
              <div className='mode-play'>
             <Navbar />
 
@@ -35,7 +35,7 @@ const Tournament = () => {
                 
             </div>
             
-        
+        </div>
 
         <style jsx>
         {`
@@ -47,7 +47,7 @@ const Tournament = () => {
             
         `}
         </style>
-        </div>
+        </>
         
     );
 }

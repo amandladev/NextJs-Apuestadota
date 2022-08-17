@@ -37,7 +37,7 @@ const ProfileSettings = () => {
         setExtra(true);
     }
     return (
-        <div>
+        <>
             <div className="profile-container">
                         <div className="profile-intro-i">
                             
@@ -186,13 +186,13 @@ const ProfileSettings = () => {
                 <style jsx>
                 {`
 
-.record-dflex {
-    width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .record-dflex {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
                 .d-none {
                     display: none;
                 }
@@ -396,9 +396,42 @@ const ProfileSettings = () => {
     background-color: #313c60;
     color: rgb(0, 0, 0);
 }
+
+
+
+
+{/* MEDIA QUERYS */}
+
+@media (max-width: 375px) {
+
+    .profile-container {
+        padding: 0.5rem;
+    }
+
+    .profile-intro-i {
+        gap: 0px;
+    }
+
+    .profile-intro-img {
+        width: 100px;   
+        height: 100px;
+    }
+
+    .profile-intro-i h3 {
+        margin-top: 7px;
+        font-size: 13px;
+    }
+
+    .profiel-green-q {
+        padding: 0.25rem .5rem;
+    }
+    .profiel-green-q h4 {
+        font-size: 10px;
+    }
+}
                 `}
                 </style>
-        </div>
+        </>
     );
 }
 

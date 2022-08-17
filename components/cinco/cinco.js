@@ -165,10 +165,6 @@ const Cinco = () => {
                     <style jsx>
                     {`
 
-
-
-                   
-
                     {/* EL RESTO AQUI */}
                     .interface-grid-c {
     display: grid;
@@ -182,7 +178,6 @@ const Cinco = () => {
     margin-top: 0!important;
     margin-bottom: 0!important;
     align-items: center;   
-    /* padding-top: 3rem; */
     padding-bottom: 9rem;
 }
 
@@ -201,7 +196,6 @@ const Cinco = () => {
 }
 
 .waiting-room-container {
-    
     background: rgba(235, 235, 235, 0.096);
     box-shadow: -25px 50px 40px rgba(0, 0, 0, 0.25);
     padding: 1rem 2rem 1rem 2rem;  
@@ -228,8 +222,6 @@ const Cinco = () => {
     font-size: 40px;
     line-height: 72px;
     color: #B6FF40;
-    /* border: 1px solid #000000; */
-    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8),-1px -1px 0px rgba(0, 0, 0, 0.8);
 }
 
@@ -321,9 +313,7 @@ const Cinco = () => {
     background: rgba(217, 217, 217, 0.2);
     box-shadow: -25px 50px 40px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
-    /* Note: backdrop-filter has minimal browser support */
     margin-right: 2rem;
-   
     padding: 4rem;
 }
                     `}</style>

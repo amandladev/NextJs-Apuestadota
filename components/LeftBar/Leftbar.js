@@ -4,75 +4,74 @@ import { useState } from 'react';
 
 const Leftbar = (classWitdraw, c2, c3, c4) => {
 
-
-   
-console.log(classWitdraw)
     return (
-        <div className="left-container">
-        <div className="left-container-header">
-            <div className="pad--s">
-                <h3 className="left-container-h3">Tu Saldo:</h3>
-                <h3 className="left-container-h3 left-flex-container-h"> <img src='/icons/currency-usd-g.png' className='dollar--svg'></img><span className="fontw-l"> 120.00</span></h3>
-            </div>
+        <>
+            <div className="left-container">
+            <div className="left-container-header">
+                <div className="pad--s">
+                    <h3 className="left-container-h3">Tu Saldo:</h3>
+                    <h3 className="left-container-h3 left-flex-container-h"> <img src='/icons/currency-usd-g.png' className='dollar--svg'></img><span className="fontw-l"> 120.00</span></h3>
+                </div>
 
-            <Link href={'/extra'}>
-                <img src='/icons/right-arrow-svg.svg' className='right-arrow--svg'></img>
-            </Link>
-            
-        </div>
-        <div className="left-container-body">
-            <div className="left-container-body-item">
-                <Link href="/play">
-                    <a className={classWitdraw.c2}>
-                        <img className="left-container-img left-img-active" src="/icons/controller-classic-l.png" alt="home" /> 
-                        <h3 className="left-container-h3 left-h3-active">JUEGA</h3>
-                    </a>
+                <Link href={'/extra'}>
+                    <img src='/icons/right-arrow-svg.svg' className='right-arrow--svg'></img>
                 </Link>
+                
             </div>
-            <div className="left-container-body-item">
-                <Link href="/profile">
-                    <a className={classWitdraw.c4} >
-                        <img  className="left-container-img left-img-active" src="/icons/account-l.png" alt="home" /> 
-                        <h3 className="left-container-h3  left-h3-active">PERFIL</h3>
+            <div className="left-container-body">
+                <div className="left-container-body-item">
+                    <Link href="/play">
+                        <a className={classWitdraw.c2}>
+                            <img className="left-container-img left-img-active" src="/icons/controller-classic-l.png" alt="home" /> 
+                            <h3 className="left-container-h3 left-h3-active">JUEGA</h3>
+                        </a>
+                    </Link>
+                </div>
+                <div className="left-container-body-item">
+                    <Link href="/profile">
+                        <a className={classWitdraw.c4} >
+                            <img  className="left-container-img left-img-active" src="/icons/account-l.png" alt="home" /> 
+                            <h3 className="left-container-h3  left-h3-active">PERFIL</h3>
+                        </a>
+                    </Link>
+                </div>
+                <div className="left-container-body-item">
+                    <Link href="/deposit"> 
+                        <a className={classWitdraw.c3}>
+                            <img className="left-container-img left-img-active" src="/icons/cash-fast-l.png" alt="home" /> 
+                            <h3 className="left-container-h3 left-h3-active">DEPOSITO</h3>
+                        </a>
+                    </Link>
+                </div>
+                <div className="left-container-body-item">
+                    <Link href="/withdraw">
+                        <a className={classWitdraw.classWitdraw} >
+                            <img className="left-container-img left-img-active" src="/icons/currency-usd-l.png" alt="home" /> 
+                            <h3 className="left-container-h3 left-h3-active">RETIRO</h3>
+                        </a>
+                    </Link> 
+                </div>
+                <div className="left-container-body-item disable">
+                    <a href="../../pages/solo/solo.html">
+                        <img className="left-container-img" src="icons/alert-outline-l.png" alt="home" /> 
+                        <h3 className="left-container-h3">SOPORTE</h3>
                     </a>
-                </Link>
-            </div>
-            <div className="left-container-body-item">
-                <Link href="/deposit"> 
-                    <a className={classWitdraw.c3}>
-                        <img className="left-container-img left-img-active" src="/icons/cash-fast-l.png" alt="home" /> 
-                        <h3 className="left-container-h3 left-h3-active">DEPOSITO</h3>
+                </div>
+                <div className="left-container-body-item disable">
+                    <a href="../../pages/solo/solo.html">
+                        <img className="left-container-img" src="icons/help-box-l.png" alt="home" /> 
+                        <h3 className="left-container-h3">TUTORIAL</h3>
                     </a>
-                </Link>
-            </div>
-            <div className="left-container-body-item">
-                <Link href="/withdraw">
-                    <a className={classWitdraw.classWitdraw} >
-                        <img className="left-container-img left-img-active" src="/icons/currency-usd-l.png" alt="home" /> 
-                        <h3 className="left-container-h3 left-h3-active">RETIRO</h3>
+                </div> 
+                {/* <div className="left-container-body-item bottom-icon">
+                    <Link href="/">
+                    <a>
+                        <img className="left-container-img" src="/icons/logout-l.png" alt="home" />   
                     </a>
-                </Link> 
+                    </Link>
+                </div> */}
+                
             </div>
-             <div className="left-container-body-item disable">
-                <a href="../../pages/solo/solo.html">
-                    <img className="left-container-img" src="icons/alert-outline-l.png" alt="home" /> 
-                    <h3 className="left-container-h3">SOPORTE</h3>
-                </a>
-            </div>
-            <div className="left-container-body-item disable">
-                <a href="../../pages/solo/solo.html">
-                    <img className="left-container-img" src="icons/help-box-l.png" alt="home" /> 
-                    <h3 className="left-container-h3">TUTORIAL</h3>
-                </a>
-            </div> 
-            {/* <div className="left-container-body-item bottom-icon">
-                <Link href="/">
-                <a>
-                    <img className="left-container-img" src="/icons/logout-l.png" alt="home" />   
-                </a>
-                </Link>
-            </div> */}
-            
         </div>
 
         <style jsx> 
@@ -213,7 +212,9 @@ console.log(classWitdraw)
 
 
         `}</style>
-    </div>
+ 
+
+    </>
     );
 }
 

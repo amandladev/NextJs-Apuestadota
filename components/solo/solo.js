@@ -7,13 +7,13 @@ const Solo = () => {
     const [active, setActive] = useState(false);
 
     const handleClick = event => {
-        // 👇️ toggle isActive state on click
-        setActive(current => !current);
-        
+
+        setActive(current => !current);    
+
       };
 
-           
-    
+
+      
     return (
         <>
               <div className={active ? 'sss scaleuptr visible' : 'sss scaledowntop'} id="sss">
@@ -301,6 +301,24 @@ const Solo = () => {
       
 }
   }
+    @media (max-width: 375px) { 
+        .mode-create-lobby {
+            margin-top: 14%;
+            padding: 50px 22px;
+    }
+    .mode-solo.amount h3 {
+        font-size: 18px;
+    }
+    .subtitle-modes {
+        font-size: 16px;   
+        margin-left: 30px; 
+    }
+
+    .start-game-btn {
+        font-size: 20px;
+        width: 310px;
+    }
+    }
             `}</style>
         </>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Tourn = () => {
     return (
-        <div>
+        <>
                     <div className="mode--solo">
                         <div className="mode--solo--c">
                             <div className="solo--title"> 
@@ -490,7 +490,7 @@ const Tourn = () => {
 
 
                     `}</style>
-        </div>
+        </>
     );
 }
 
