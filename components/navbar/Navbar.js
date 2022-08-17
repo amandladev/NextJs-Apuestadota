@@ -227,7 +227,7 @@ const Navbar = () => {
 
                 .menu-navigation-media {
                     margin: 10px 19px;
-                    height: 80%;
+                    height: 88%;
                     padding-top: 10px;
             }     
         } 

@@ -135,17 +135,17 @@ const ProfileSettings = () => {
                         </div>
 
                         <div className={record ? 'd-block' : 'd-none'}>
-                            <div className='record-dflex'>
+                            {/* <div className='record-dflex'>
                                 <img src='/table.jpg'></img>
-                            </div>
+                            </div> */}
                             
                         </div>
 
 
                         <div className={extra ? 'd-block' : 'd-none'}>
-                            <div className='record-dflex'>
+                            {/* <div className='record-dflex'>
                                 <img src='/infoe.jpg'></img>
-                            </div>
+                            </div> */}
                             
                         </div>
                        

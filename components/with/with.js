@@ -193,7 +193,7 @@ const With = () => {
                         margin-left: 27%;
                     }
                     .deposito-min-max {
-                        margin: 4rem 1rem;
+                        margin: 3rem 1rem 2rem;
                     }
                     .deposito-min-max h4 {
                         font-size: 12px;
