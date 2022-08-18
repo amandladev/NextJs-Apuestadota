@@ -223,10 +223,12 @@ const Navbar = () => {
                     background-color: #ebfbd1;
                 }
             }    
-            @media (max-width: 376px) { 
+            @media (max-width: 415px) { 
 
                 .menu-navigation-media {
-                    margin: 30px 19px;
+                    margin: 10px 19px;
+                    height: 88%;
+                    padding-top: 10px;
             }     
         } 
         `}

@@ -35,7 +35,7 @@ const Solo = () => {
                                 </div>
                             </div>       
                             <div className="start-game-btn-container">
-                                <button className="start-game-btn">Crear Sala</button>
+                                <button className="start-game-btn">Buscar partida</button>
                             </div> 
                             <div>
                                 <h4 className="mb-sm subtitle-modes lighterr">Detalles de la apuesta:</h4>

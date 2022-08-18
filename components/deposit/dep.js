@@ -162,7 +162,7 @@ const Dep = () => {
                     color: #fff;
                     font-family: 'Roboto Mono', monospace;
                     font-size: 16px;
-                    font-weight: 600;
+                    font-weight: 600; 
                 }
                 .deposit-min-max-sl {
                     display:flex;
@@ -170,15 +170,9 @@ const Dep = () => {
                 }
                 .deposit-terms-c {
                     margin-left: 2rem;
-                    margin-top: 1rem;
+                    margin-top: 2rem;
                 }
-                .deposit-terms-c input {
-                    position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-                }
+                
                 .deposit-terms-container {
                     display: flex;
                     flex-direction: column;

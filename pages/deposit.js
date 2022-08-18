@@ -31,7 +31,7 @@ const Deposit = () => {
                 height: 50px;
                 position: absolute;
                 right: 0;
-                
+                bottom: 15%;
                 margin-right: 40px;
                 margin-top: -20px;
                 filter: invert(89%) sepia(77%) saturate(549%) hue-rotate(26deg) brightness(105%) contrast(103%);

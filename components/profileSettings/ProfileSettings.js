@@ -137,6 +137,7 @@ const ProfileSettings = () => {
                         <div className={record ? 'd-block' : 'd-none'}>
                         <div className='history-flex-c'>
                             <h4 className='gc-profile-title'>Solicitud para la retirada de fondos</h4>
+                            {/* TABLA EN DESKTOP */}
                             <table>
                                 <tr>
                                     <th>
@@ -204,6 +205,45 @@ const ProfileSettings = () => {
                                     </td>
                                     <td>
                                         <span className='gc-green-text'>Mastercard **9775</span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            {/* TABLA EN MOBILE */}
+
+                            <table>
+                                <tr>
+                                    <th>
+                                        Fecha
+                                    </th>
+                                    <th>
+                                        Importe / Comision
+                                    </th>
+                                    <th>
+                                        Estado
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td className='mobile-table-td'>
+                                        <span>
+                                                15/08/2022
+                                        </span>
+                                        <span>
+                                                Mastercard **9775
+                                        </span>
+                                    </td>
+                                    <td className='mobile-table-td'>
+                                        <span>
+                                            $20
+                                        </span>
+                                        <span>
+                                            __
+                                        </span>
+                                    </td>
+                                    <td className='mobile-table-td'>
+                                        <span className='gc-green-text'>
+                                            Terminado
+                                        </span>
                                     </td>
                                 </tr>
                             </table>
@@ -556,7 +596,6 @@ table {
     border-image: linear-gradient(to bottom,rgba(255,255,255,.1),rgba(255,255,255,0))1;
     padding: 20px;
     margin: 1rem 2rem;
-
 }
 
 th {
@@ -572,6 +611,14 @@ th, td {
     font-family: 'Roboto Mono', monospace;
 }
 
+
+
+{/* MOBILE TABLE */}
+
+.mobile-table-td {
+    display: flex;
+    flex-direction: column;
+}
 
 {/* MEDIA QUERYS */}
 
